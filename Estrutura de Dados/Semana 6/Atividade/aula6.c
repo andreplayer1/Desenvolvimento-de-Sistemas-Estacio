@@ -6,13 +6,14 @@ typedef struct Aluno {
     int matricula;
     char nome[50];
     float nota;
+    char turma[10];
 } Aluno;
 
 int main(){
     //Missão 1
     int x = 10;
     int *p = &x;
-    printf("Valor: %d Endereco: %p\n", x, p );
+    printf("Valor: %d Endereco: %p\n", x, p);
 
     //Missão 2
     dobrar(p);
@@ -39,10 +40,13 @@ void oApontador() {
     printf("Digite a matricula: ");
     scanf("%i", &pa->matricula);
     
-    
+    printf("Digite sua turma: ");
+    scanf("%s", pa->turma);
+
     printf("Nome do Aluno: %s\n", pa->nome);
     printf("Nota do Aluno: %f\n", pa->nota);
     printf("Matricula: %i\n", pa->matricula);
+    printf("Turma: %s\n", pa->turma);
     
 }
 
