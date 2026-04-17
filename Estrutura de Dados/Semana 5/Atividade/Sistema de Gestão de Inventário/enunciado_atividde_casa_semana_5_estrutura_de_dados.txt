@@ -1,0 +1,16 @@
+Enunciado da Questão:
+Desenvolva, em linguagem C++, um programa completo que atenda aos seguintes requisitos:  
+
+1. Defina uma `struct Produto` contendo os campos:  
+   - código (int)  
+   - nome (string)  
+   - preço (float)  
+
+2. Leia e armazene os dados de exatamente 5 produtos em um vetor.  
+
+3. Processe o vetor para identificar o produto de maior valor financeiro.  
+
+4. Imprima exclusivamente o relatório completo (código, nome e preço) do produto mais caro.  
+
+OBSERVAÇÃO:
+O arquivo pratica_1_c_mais_mais_com_string.txt pode servir de referência, altere a extensão do arquivo de .txt para .c++

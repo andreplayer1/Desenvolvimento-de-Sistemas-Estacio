@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    background-color: rgb(77, 77, 77);
+}
+
+form, #container {
+    background-color: aquamarine;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 1px 20px 10px 7px;
+    border-radius: 7px 7px 0px 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+input, textarea, button{
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    box-shadow: 1px 1px 3px;
+}
+
+button:hover{
+    color: brown;
+    font-size: 14px;
+}
+
+#container {
+    margin-top: 0px;
+    border-radius: 0px 0px 7px 7px;
+    background-color: rgb(15, 243, 167);
+}
+
+span {
+    color: red;
+}
+
+#resumo {
+    font-size: 13px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.title {
+    color: rgb(0, 114, 76);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

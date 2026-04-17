@@ -1,0 +1,14 @@
+Atividade da Semana: Menu de Opções em Flutter
+
+Objetivo:  
+Desenvolver um aplicativo simples em Flutter que implemente navegação entre telas a partir de um menu principal, aplicando conceitos de "rotas" e "widgets de navegação".
+
+Descrição da tarefa:  
+Você deverá criar um aplicativo com uma tela inicial que funcione como "menu principal", contendo pelo menos dois botões distintos. Cada botão deve direcionar o usuário para uma tela exclusiva. Além disso, cada tela secundária deve permitir o retorno ao menu principal.
+
+Critérios de avaliação:
+- ✅ Menu principal com pelo menos dois botões distintos.  
+- ✅ Cada botão leva a uma tela exclusiva (Sobre e Configurações).  
+- ✅ Implementação correta de rotas e navegação.  
+- ✅ Possibilidade de retornar ao menu principal a partir de qualquer tela secundária.  
+- ✅ Organização e clareza do código.  

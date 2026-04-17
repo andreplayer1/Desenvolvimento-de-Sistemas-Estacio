@@ -1,0 +1,24 @@
+Desenvolver uma página web interativa contendo um formulário simples.
+Ao clicar no botão "Resumir", o sistema deve capturar os dados digitados e exibir um Card de Resumo na própria página, sem recarregamento.
+
+Campos obrigatórios do formulário:
+- Nome
+- E-mail
+- Mensagem
+- Botão: Resumir
+
+Exemplo esperado:  
+Após o preenchimento e clique no botão, deve aparecer um card com os dados informados:
+
+Código
+Card de Resumo
+Nome: [valor digitado]
+E-mail: [valor digitado]
+Mensagem: [valor digitado]
+
+
+Critérios de Entrega:
+- Seleção correta dos elementos (sem IDs quebrados).
+- Uso estrito de addEventListener para capturar a ação do botão.
+- Atualização limpa do DOM utilizando .innerText ou .innerHTML.
+- O card deve ser gerado dinamicamente na mesma página, sem reload.

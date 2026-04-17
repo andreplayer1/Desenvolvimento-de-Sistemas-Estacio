@@ -1,0 +1,5 @@
+Nesta atividade, você irá explorar conceitos fundamentais de ponteiros e manipulação de memória na linguagem C. O objetivo é compreender como variáveis, endereços e estruturas podem ser acessados e modificados indiretamente.
+
+01 - Mapear memória de variáveisCrie um programa que declare uma variável inteira, imprima seu valor e o endereço de memória usando o especificador %p.
+02 - Alterar valores indiretamenteImplemente a função void dobrar(int *p) e teste a passagem por referência, dobrando o valor de uma variável declarada na função main.
+03 - Manipular registros com ponteirosDeclare uma struct Aluno e um ponteiro para ela. Realize a leitura de dados via teclado e imprima os campos utilizando exclusivamente o operador ->.

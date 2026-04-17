@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+#form{
+    background-color: rgb(75, 73, 71);
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 5px 5px 20px gray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid white;
+}
+
+
+h1{
+    background-color: rgb(75, 73, 71);
+    width: 500px;
+    margin: auto;
+    margin-top: 150px;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: bisque;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 5px 5px 20px gray;
+    text-shadow: 1px 1px 5px black;
+    border: 1px solid white;
+}
+
+.inputName{
+    color: bisque;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+input, button{
+    border-radius: 7px;
+    padding: 10px;
+    font-family: monospace;
+    font-size: 15px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 3px black;
+    background-color: rgb(224, 248, 248);
+}
+input{
+    font-weight: 600;
+}
+
+#button:hover{
+    font-size: 16px;
+    color: red;
+}
+
+#confirmacao{
+    color: bisque;
+    font-size: 17px;
+    font-weight: bolder;
+}

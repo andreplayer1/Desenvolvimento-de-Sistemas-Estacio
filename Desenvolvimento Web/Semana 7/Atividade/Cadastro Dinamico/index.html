@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Dinamico</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro Dinâmico</h1>
+
+    <form action="" id="form">
+        <label for="nome" class="inputName">Nome: <br>
+            <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" id="inputName"> <br>
+            <span id="erroNome"></span><br>
+        </label>
+
+        <label for="email" class="inputName"> Email: <br>
+                <input type="email" id="email" name="email" placeholder="Digite o seu email"> <br>
+                <span id="erroEmail"></span><br>
+        </label>
+        
+
+        <label for="senha" class="inputName">Senha: <br>
+            <input type="password" id="senha" name="senha" placeholder="**********"> <br>
+            <span id="erroSenha"></span>
+        </label> <br>
+
+        <button type="submit" id="button">Finalizar</button><br><br>
+        <div id="confirmacao"></div>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
