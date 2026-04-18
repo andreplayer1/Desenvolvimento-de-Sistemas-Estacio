@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+
 void dobrar(int*p);
 void oApontador();
 
@@ -32,16 +34,16 @@ void oApontador() {
     pa = &aluno1; //Endereço
     
     printf("Digite o nome: ");
-    scanf("%s", pa->nome);
+    scanf(" %49[^\n]", pa->nome);
     
     printf("Digite a nota: ");
-    scanf("%f", &pa->nota);
+    scanf(" %f", &pa->nota);
     
     printf("Digite a matricula: ");
-    scanf("%i", &pa->matricula);
+    scanf(" %i", &pa->matricula);
     
     printf("Digite sua turma: ");
-    scanf("%s", pa->turma);
+    scanf(" %9[^\n]", pa->turma);
 
     printf("Nome do Aluno: %s\n", pa->nome);
     printf("Nota do Aluno: %f\n", pa->nota);
