@@ -1,0 +1,24 @@
+Refatoração de Código em C
+
+Contexto:  
+Na última semana, você desenvolveu um programa de Cadastro de Alunos utilizando struct e vetor, mas em formato monolítico (todo o código concentrado dentro da função main). Agora, o objetivo é refatorar esse programa, aplicando boas práticas de modularização.
+
+Tarefas:
+1. Função de Leitura de Dados
+	- Crie uma função void responsável por realizar a entrada dos dados dos alunos (nome, matrícula, notas).
+	- Essa função deve receber como parâmetro o vetor de alunos e preencher suas informações.
+
+2. Função de Cálculo da Média
+	- Crie uma função com retorno (float) que receba as notas de um aluno e devolva sua média.
+	- Essa função será chamada dentro do programa principal para cada aluno.
+
+3. Procedimento de Impressão Formatada
+	- Crie uma função void que receba os dados de um aluno e imprima suas informações de forma organizada (nome, matrícula, notas e média).
+
+Regra Arquitetural:  
+A função main() deve conter apenas:
+	- Declaração das variáveis necessárias.
+	- Chamadas às três funções criadas.
+
+Objetivo da atividade:  
+Praticar a refatoração de código, aplicando conceitos de modularização, funções e procedimentos em C, tornando o programa mais legível, organizado e reutilizável.

@@ -1,0 +1,14 @@
+Utilizando como referência o código do Mini-App de Tarefas apresentado em sala de aula, desenhe um diagrama simples (esquema visual) que ilustre a "viagem" realizada pelo objeto da classe Tarefa entre as duas telas que compõem o sistema.
+
+Em seu diagrama, você deve identificar e destacar os seguintes pontos:
+	1 - A Solicitação e a Espera: Como a TelaPrincipal inicia a navegação e como ela utiliza a palavra-chave await para aguardar a conclusão da ação na próxima tela.
+
+	2 - A Origem do Dado: Em qual momento e em qual classe (TelaFormulario) o objeto Tarefa é efetivamente criado a partir das entradas do usuário.
+
+	3 - O Comando de Retorno: Como o comando Navigator.pop(context, novaTarefa) é empregado para fechar a tela de formulário e "entregar" o objeto de volta para a tela anterior.
+
+	4 - A Atualização da Interface: Como a TelaPrincipal recebe esse dado retornado e qual método ela utiliza para garantir que a nova tarefa apareça imediatamente na lista visual (uso do setState).
+
+Instruções de Entrega:
+	- O diagrama pode ser feito à mão ou em ferramentas digitais simples.
+	- Foque em mostrar as setas de direção dos dados e os nomes dos comandos do Flutter envolvidos em cada etapa do processo.
