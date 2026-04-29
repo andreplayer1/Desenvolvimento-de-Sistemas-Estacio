@@ -1,0 +1,10 @@
+Atividade Prática – Mini Projeto: To-Do List (Lista de Tarefas)
+Objetivo:  
+Desenvolver uma aplicação web simples de lista de tarefas (To-Do List) utilizando HTML, CSS e JavaScript, aplicando conceitos de manipulação do DOM, eventos, arrays e repetições.
+
+Descrição da Atividade:  
+Você deverá criar uma página web que permita ao usuário adicionar, visualizar e excluir tarefas. A interface deve conter:
+- Um campo de texto para digitar uma nova tarefa.
+- Um botão “Adicionar” que insere a tarefa na lista.
+- Uma lista visível com todas as tarefas cadastradas.
+- Um botão “Excluir Selecionados” para remover tarefas marcadas.
