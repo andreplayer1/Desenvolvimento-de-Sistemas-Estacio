@@ -1,0 +1,75 @@
+/* CSS Básico com o seu tema Escuro/Tech */
+body { 
+    font-family: Arial, sans-serif; 
+    background-color: #0f172a; 
+    color: #f8fafc; 
+    padding: 20px; 
+}
+
+.container { 
+    max-width: 600px; 
+    margin: auto; 
+    background: #1e293b; 
+    padding: 30px; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
+}
+
+h2 { 
+    color: #0ea5e9; 
+    text-align: center; 
+    margin-top: 0; 
+}
+
+button { 
+    background: #0ea5e9; 
+    color: white; 
+    border: none; 
+    padding: 12px 20px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    width: 100%; 
+    font-weight: bold; 
+    transition: 0.3s; 
+}
+
+button:hover { 
+    background: #0284c7; 
+}
+
+button:disabled { 
+    background: #475569; 
+    cursor: not-allowed; 
+}
+
+ul { 
+    list-style-type: none; 
+    padding: 0; 
+    margin-top: 20px; 
+}
+
+li { 
+    background: #334155; 
+    margin-bottom: 12px; 
+    padding: 15px 20px; 
+    border-radius: 8px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-left: 4px solid #0ea5e9;
+}
+
+.tag { 
+    background: #0f172a; 
+    padding: 5px 12px; 
+    border-radius: 12px; 
+    font-size: 14px; 
+    font-weight: bold; 
+    color: #38bdf8; 
+}
+
+.genero { 
+    font-size: 13px; 
+    color: #94a3b8; 
+}
