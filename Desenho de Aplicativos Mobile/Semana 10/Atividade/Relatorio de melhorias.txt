@@ -1,0 +1,27 @@
+1.1. Contraste Visual
+A WCAG reforça que o mínimo de contraste aceitável é de 4.5:1, um valor consideravelmente baixo.
+No KIM+, os textos de suporte, como os subtítulos "Confira extrato de uso...", "Ônibus, Brt, Metro", além do texto de placeholder na barra de busca "Para onde?", utilizam uma fonte em tom de cinza claro sobre um fundo majoritariamente branco. Essa escolha de paleta praticamente invisibiliza a informação para usuários com baixa visão (Eu quando estou sem óculos já fica difícil) ou pessoas utilizando o aplicativo sob a luz do sol...
+
+Melhoria: Substituir o cinza claro por um tom de Dark Charcoal e aplicar o TextStyle(color: Colors.black87) do Flutter além de um background azul claro bem discreto no placeholder para garantir o contraste seguro.
+
+1.2. Legibilidade e Leitura
+O peso e o tamanho das fontes são inconsistentes. Informações secundárias estão em uma tipografia fina, dificultando a leitura. Além disso, há uma evidente falha de responsividade tipográfica: o botão "Utilizados e Expirados" apresenta uma quebra de linha inadequada, isolando a letra "s" na linha inferior. Isso prejudica a fluidez da leitura e demonstra uma interface engessada, que pode quebrar completamente caso o usuário ative configurações de acessibilidade para aumentar a fonte do sistema operacional.
+
+Melhoria: Padronizar os tamanhos de fonte usando hierarquia clara (pesos em bold para dados mais importantes). Para corrigir a quebra de texto no Flutter, deve-se utilizar o widget FittedBox (que ajusta a escala do texto dinamicamente) ou aplicar overflow: TextOverflow.ellipsis para limites estritos de layout.
+
+1.3. Distribuição Espacial (Zonas de Toque)
+A interface apresenta ícones e botões de ação que não respeitam a área mínima recomendada de 48x48 dp. Links como "ver todos >" e o pequeno ícone de informação (i) geram atrito motor, resultando em toques acidentais. Além disso, há uma grave falha na distribuição de controles: a interface omite funções espaciais essenciais, carecendo de um botão claro e isolado para "Excluir" cartões perdidos ou cancelados. Essa ausência induz diretamente a erros de navegação, permitindo recargas acidentais em cartões inutilizados por falta de uma rota de exclusão visualmente acessível. (Eu mesmo já recarreguei um cartão perdido sem querer.)
+
+Melhoria: Envolver os ícones e links acionáveis com o widget Padding ou SizedBox para expandir a área de toque invisível e implementar uma aba de configurações do cartão com o botão "Remover" em destaque.
+
+1.4. Feedback para Usuários
+O aplicativo peca severamente na comunicação de estado com o usuário. Primeiramente, o sistema apresenta um atraso crítico na sincronização de dados: o saldo e o extrato não refletem o uso em tempo real, onde passagens consumidas em um dia só são contabilizadas no sistema no dia seguinte, uma pessoa desavisada olha no aplicativo e vê que ainda tem saldo, mas quando chega no transporte para pagar está sem... Complicado. Secundariamente, faltam microinterações visuais; ao tocar no ícone de "olho" para ocultar/revelar o saldo ou ao acionar funções de recarga, a interface não oferece transições fluidas.
+
+Melhoria: Sincronizar o banco de dados em tempo real ou informar explicitamente o horário da última atualização na tela.
+
+1.5. Rótulos Semânticos Viáveis e Inviáveis
+Pensando em usuários que dependem de leitores de tela (TalkBack / VoiceOver), a interface atual precisa de ajustes no código para mapeamento auditivo adequado:
+
+Viáveis (Necessitam de Rótulo): O ícone do sino de notificação, o avatar de perfil com as iniciais e a lupa vermelha de pesquisa precisam obrigatoriamente do widget Semantics(label: "...", button: true) para que o leitor de tela anuncie a ação, pois são botões sem texto explícito.
+
+Inviáveis (Precisam ser Ocultados): As imagens de fundo contendo o design estético dos cartões de transporte (grafismos azuis e logotipos) geram ruído auditivo. Devem ser envolvidas no widget ExcludeSemantics(...) para não poluir a experiência de quem ouve a tela, já que são elementos puramente decorativos.

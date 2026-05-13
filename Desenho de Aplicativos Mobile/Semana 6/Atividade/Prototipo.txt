@@ -1,0 +1,19 @@
+1 Tela Inicial
+Lá em cima, tem uma AppBar com o título no meio e um ícone de sino de notificação do lado direito.
+No body tem GridView com duas colunas para distribuir os 4 blocos. Cada bloco desses tem um Container ou um Card com as bordas arredondadas e dentro de cada bloco, tem uma Column para empilhar o ícone em cima e o texto embaixo. No rodapé tem uma BottomNavigationBar.
+
+2 Lista de Itens
+Aqui tem uma lista de rolagem
+AppBar só com o título
+No body tem ListView.builder com o ListTile que ele traz a estrutura pronta.
+Um quadrado simulando a imagem, no title o nome do item em negrito, no subtitle a descrição menorzinha
+Ao lado direito da lista um ícone de setinha apontando para a direita.
+O rodapé continua com a mesma barra de navegação da tela anterior.
+
+3 Tela de Cadastro/Detalhes
+Formulário na AppBar, tem um botão de voltar e o título. Como o usuário vai precisar digitar coisas, o corpo inteiro da tela precisa ficar dentro de um SingleChildScrollView junto com uma Column, senão o teclado do celular sobe e dá erro de overflow.
+No topo da coluna, tem um Container com o espaço da foto dentro, com um ícone de paisagem no meio.
+Abaixo dele, vêm os campos de texto (TextField ou TextFormField) para Nome e Descrição.
+O campo de data tem uma setinha do lado para as opções de múltipla escolha.
+Em baixo tem um Radio com duas opções.
+No final, tem um ElevatedButton com o texto "Adicionar".

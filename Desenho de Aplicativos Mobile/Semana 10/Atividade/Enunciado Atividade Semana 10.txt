@@ -1,0 +1,8 @@
+ATIVIDADE:
+
+1. Encontre uma tela de um aplicativo e elabore um relatório de Melhorias de Acessibilidade, com foco em:
+1.1. Contraste visual
+1.2. Legibilidade e leitura
+1.3. Distribuição espacial
+1.4. Feedback para usuários
+1.5. Rótulos semânticos viáveis e inviáveis
