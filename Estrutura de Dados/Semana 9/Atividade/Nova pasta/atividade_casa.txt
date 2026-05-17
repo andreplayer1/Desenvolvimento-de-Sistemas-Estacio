@@ -1,0 +1,43 @@
+Atividade – Estrutura de Dados em C
+
+Objetivo
+Implementar um programa em linguagem C que manipule uma lista de alunos utilizando **TAD (Tipo Abstrato de Dados)**, com funções específicas para inserção e remoção de elementos em posições determinadas pelo usuário.
+
+Requisitos da Atividade
+
+1. Definição da Estrutura de Dados
+   - Criar um `struct Aluno` contendo pelo menos os seguintes campos:
+     - Matrícula (inteiro)
+     - Nome (string)
+     - Idade (inteiro)
+
+2. Lista de Alunos
+   - Implementar uma lista sequencial (vetor) de alunos com capacidade máxima pré-definida.
+   - Inicializar a lista com alguns alunos já cadastrados (dados pré-determinados).
+
+3. Operações:
+   - Inserção:
+     - Perguntar ao usuário em qual posição deseja inserir um novo aluno.
+     - Ler os dados do novo aluno (matrícula, nome e idade).
+     - Inserir o aluno na posição indicada, ajustando os elementos da lista.
+     - Exibir a lista atualizada.
+   - Remoção:
+     - Perguntar ao usuário qual posição deseja remover.
+     - Remover o aluno da posição indicada, ajustando os elementos da lista.
+     - Exibir a lista atualizada.
+
+4. Critérios de Validação
+   - Ler de forma segura a posição solicitada pelo usuário.
+   - Garantir o reajuste imediato dos elementos após inserção ou remoção.
+   - Tratar solicitações impossíveis:
+     - Posições menores que zero.
+     - Posições maiores que o tamanho lógico da lista.
+     - Tentativas de inserção em lista cheia.
+     - Tentativas de remoção em lista vazia.
+
+Resultado Esperado
+Ao final da execução, o programa deve:
+- Mostrar a lista inicial de alunos.
+- Permitir a inserção de um novo aluno em posição válida.
+- Permitir a remoção de um aluno em posição válida.
+- Exibir mensagens de erro claras quando houver tentativas inválidas.
