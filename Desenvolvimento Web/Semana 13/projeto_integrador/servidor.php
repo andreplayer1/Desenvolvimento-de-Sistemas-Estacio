@@ -3,16 +3,16 @@ header("Content-Type: application/json; charset=utf-8");// Avisamos que a respos
 
 // Simulação de Banco de Dados
 $estoque = [
-    1 => ["nome" => "Gabinete Montech King 95", "categoria" => "componentes", "preço" => 700.00],
-    2 => ["nome" => "Placa de Video RTX 5060", "categoria" => "componentes", "preço" => 2500.00],
-    3 => ["nome" => "Memoria RAM Team Force Delta RGB 16GB", "categoria" => "componentes", "preço" => 450.00],
-    4 => ["nome" => "Processador Ryzen 5 5700X", "categoria" => "componentes", "preço" => 1100.00],
-    5 => ["nome" => "SSD Kingston NV3", "categoria" => "componentes", "preço" => 900.00],
-    6 => ["nome" => "Placa Mãe MSI MPG B550", "categoria" => "componentes", "preço" => 999.00],
-    7 => ["nome" => "Teclado Machenike K500W", "categoria" => "perifericos", "preço" => 643.00],
-    8 => ["nome" => "Mouse Atack Shark X11", "categoria" => "perifericos", "preço" => 169.90],
-    9 => ["nome" => "Controle Gamesir T4 Pro", "categoria" => "perfifericos", "preço" => 379.00],
-    10 => ["nome" => "Monitor LG Ultrawide 29", "categoria" => "monitores", "preço" => 1100.]
+    1 => ["nome" => "Gabinete Montech King 95", "categoria" => "componentes", "preco" => 700.00],
+    2 => ["nome" => "Placa de Video RTX 5060", "categoria" => "componentes", "preco" => 2500.00],
+    3 => ["nome" => "Memoria RAM Team Force Delta RGB 16GB", "categoria" => "componentes", "preco" => 450.00],
+    4 => ["nome" => "Processador Ryzen 5 5700X", "categoria" => "componentes", "preco" => 1100.00],
+    5 => ["nome" => "SSD Kingston NV3", "categoria" => "componentes", "preco" => 900.00],
+    6 => ["nome" => "Placa Mãe MSI MPG B550", "categoria" => "componentes", "preco" => 999.00],
+    7 => ["nome" => "Teclado Machenike K500W", "categoria" => "perifericos", "preco" => 643.00],
+    8 => ["nome" => "Mouse Atack Shark X11", "categoria" => "perifericos", "preco" => 169.90],
+    9 => ["nome" => "Controle Gamesir T4 Pro", "categoria" => "perfifericos", "preco" => 379.00],
+    10 => ["nome" => "Monitor LG Ultrawide 29", "categoria" => "monitores", "preco" => 1100.]
 ];
 
 $termoBuscado = $_GET["busca"] ?? ""; // Pega o que vier na URL se não vier nada guarda vazio ('')
