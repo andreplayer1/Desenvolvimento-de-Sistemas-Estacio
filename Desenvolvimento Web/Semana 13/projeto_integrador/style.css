@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-pagina: #121212;
+    /* Fundo geral da tela (quase preto) */
+    --bg-tabela: #1e1e1e;
+    /* Fundo da tabela e do bloco de busca (cinza carvão) */
+    --cor-acento: #00e5ff;
+    /* Ciano neon para bordas ativas, foco e detalhes */
+    --texto-principal: #e0e0e0;
+    /* Branco fosco para não agredir os olhos no escuro */
+    --texto-mutado: #888888;
+    /* Cinza para placeholders ou cabeçalhos secundários */
+    --borda-discreta: #2d2d2d;
+    /* Para as linhas divisórias da tabela não sumirem */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 50px;
+    background-color: var(--bg-pagina);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#head,
+#result {
+    width: 600px;
+}
+
+h1 {
+    color: var(--texto-principal);
+}
+
+#campoBusca {
+    width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--texto-principal);
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    background-color: var(--bg-pagina);
+    border: 1px solid var(--borda-discreta);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#campoBusca:focus {
+    border-color: var(--cor-acento);
+    box-shadow: 0 0 12px var(--cor-acento);
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+    margin: 0;
+}
+
+table,
+tr,
+td,
+th {
+    color: var(--texto-principal);
+    padding: 10px;
+    background-color: var(--bg-tabela);
+    border: 1px solid var(--borda-discreta);
+}
