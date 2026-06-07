@@ -1,24 +1,29 @@
 const campoBusca = document.querySelector("#campoBusca");
-const btnConsultar = document.querySelector("#btnConsultar");
+const head = document.querySelector("#head");
 const resultado = document.querySelector("#result");
 
 let consultar = (event) => {
     event.preventDefault();
 
     const termo = campoBusca.value;
-    console.log(termo);
+    if (termo === "") {
+        head.style.display = "none";
+        resultado.innerHTML = "";
+    } else {
+        head.style.display = "";
+        console.log(termo);
 
-    fetch(`servidor.php?busca=${termo}`)
-        .then(response => {
-            if (!response.ok) {
-                console.log('Erro na requisição')
-            }
-            return response.json();
-        })
-        .then(dados => {
-            let listaItensHTML = '';
-            dados.forEach(produto => {
-                listaItensHTML += `
+        fetch(`servidor.php?busca=${termo}`)
+            .then(response => {
+                if (!response.ok) {
+                    console.log('Erro na requisição')
+                }
+                return response.json();
+            })
+            .then(dados => {
+                let listaItensHTML = '';
+                dados.forEach(produto => {
+                    listaItensHTML += `
                     <tr>
                         <td> ${produto.id} </td>
                         <td> ${produto.nome} </td>
@@ -26,8 +31,9 @@ let consultar = (event) => {
                         <td> ${produto.preco} </td>
                     </tr>
                 `;
+                });
+                resultado.innerHTML = listaItensHTML;
             });
-            resultado.innerHTML = listaItensHTML;
-        });
+    }
 }
-btnConsultar.addEventListener('click', consultar);
+campoBusca.addEventListener('input', consultar);
