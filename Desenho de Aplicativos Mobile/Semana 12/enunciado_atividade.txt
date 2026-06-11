@@ -1,0 +1,20 @@
+Atividade Prática – Projeto Integrador (Semana 12)
+Objetivo: Consolidar os conhecimentos de navegação entre telas, persistência de dados e exibição dinâmica em listas, aplicando-os no desenvolvimento do aplicativo final.
+
+Parte 1 – Checkpoint Prático
+Cada grupo deverá entregar:
+- Navegação principal entre pelo menos 2 telas, implementada e funcionando com Navigator.
+- Estrutura de layout base em cada tela (uso de Row, Column, Padding).
+- Implementação de uma lista funcional (ListView.builder) com salvamento local utilizando shared_preferences.
+
+Parte 2 – Registro Escrito
+Produza um documento curto contendo:
+1. Listagem das funcionalidades que o grupo se compromete a concluir até a próxima aula.
+2.  Descrição formal de cada funcionalidade (o que faz, como será implementada).
+3. Reflexão crítica: explique como a persistência de dados alterou ou melhorou a experiência do usuário (UX) no aplicativo.
+
+Recursos
+Será disponibilizado um código de referência com exemplos de:
+- Uso do shared_preferences para salvar e recuperar dados.
+- Estrutura básica de navegação entre telas.
+- Exibição dinâmica de listas com ListView.builder.
