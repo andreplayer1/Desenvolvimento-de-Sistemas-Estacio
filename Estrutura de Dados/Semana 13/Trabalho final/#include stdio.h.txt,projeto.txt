@@ -1,0 +1,178 @@
+#include <stdio.h>
+
+#define MAX_CLIENTES 100
+
+// Estrutura Cliente
+typedef struct {
+    int codigo;
+    char nome[50];
+    char telefone[20];
+} Cliente;
+
+// Estrutura Lista
+typedef struct {
+    Cliente clientes[MAX_CLIENTES];
+    int tamanho;
+} ListaClientes;
+
+// Inicializa a lista
+void inicializarLista(ListaClientes *lista)
+{
+    lista->tamanho = 0;
+    printf("Lista inicializada com sucesso!\n\n");
+}
+
+// Insere cliente
+int inserirCliente(ListaClientes *lista, Cliente novo)
+{
+    if(lista->tamanho >= MAX_CLIENTES)
+    {
+        return 0;
+    }
+
+    lista->clientes[lista->tamanho] = novo;
+    lista->tamanho++;
+
+    return 1;
+}
+
+// Remove cliente por índice
+int removerCliente(ListaClientes *lista, int indice)
+{
+    int i;
+
+    if(indice < 0 || indice >= lista->tamanho)
+    {
+        return 0;
+    }
+
+    for(i = indice; i < lista->tamanho - 1; i++)
+    {
+        lista->clientes[i] = lista->clientes[i + 1];
+    }
+
+    lista->tamanho--;
+
+    return 1;
+}
+
+// Busca cliente pelo código
+int buscarCliente(ListaClientes *lista, int codigo)
+{
+    int i;
+
+    for(i = 0; i < lista->tamanho; i++)
+    {
+        if(lista->clientes[i].codigo == codigo)
+        {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+// Exibe todos os clientes
+void listarClientes(ListaClientes *lista)
+{
+    int i;
+
+    if(lista->tamanho == 0)
+    {
+        printf("A lista esta vazia.\n");
+        return;
+    }
+
+    for(i = 0; i < lista->tamanho; i++)
+    {
+        printf("\nCliente %d\n", i + 1);
+        printf("Codigo: %d\n", lista->clientes[i].codigo);
+        printf("Nome: %s\n", lista->clientes[i].nome);
+        printf("Telefone: %s\n", lista->clientes[i].telefone);
+        printf("---------------------------\n");
+    }
+}
+
+int main()
+{
+    ListaClientes lista;
+
+    inicializarLista(&lista);
+
+    Cliente c1 = {
+        101,
+        "Maria Silva",
+        "11999999999"
+    };
+
+    Cliente c2 = {
+        102,
+        "Joao Souza",
+        "11888888888"
+    };
+
+    Cliente c3 = {
+        103,
+        "Ana Costa",
+        "11777777777"
+    };
+
+    printf("=== TESTE DE INSERCAO ===\n");
+
+    if(inserirCliente(&lista, c1))
+        printf("Cliente Maria Silva inserido.\n");
+
+    if(inserirCliente(&lista, c2))
+        printf("Cliente Joao Souza inserido.\n");
+
+    if(inserirCliente(&lista, c3))
+        printf("Cliente Ana Costa inserido.\n");
+
+    printf("\nTotal de clientes: %d\n\n", lista.tamanho);
+
+    printf("=== LISTA DE CLIENTES ===\n");
+    listarClientes(&lista);
+
+    printf("\n=== TESTE DE BUSCA ===\n");
+
+    int posicao = buscarCliente(&lista, 102);
+
+    if(posicao != -1)
+    {
+        printf("Cliente encontrado na posicao %d.\n", posicao);
+    }
+    else
+    {
+        printf("Cliente nao encontrado.\n");
+    }
+
+    printf("\n=== TESTE DE BUSCA INEXISTENTE ===\n");
+
+    posicao = buscarCliente(&lista, 999);
+
+    if(posicao == -1)
+    {
+        printf("Cliente de codigo 999 nao encontrado.\n");
+    }
+
+    printf("\n=== TESTE DE REMOCAO ===\n");
+
+    if(removerCliente(&lista, 1))
+    {
+        printf("Cliente removido com sucesso.\n");
+    }
+
+    printf("\n=== LISTA APOS REMOCAO ===\n");
+    listarClientes(&lista);
+
+    printf("\n=== TESTE DE INDICE INVALIDO ===\n");
+
+    if(!removerCliente(&lista, 10))
+    {
+        printf("Erro: indice invalido.\n");
+    }
+
+    printf("\nPrograma finalizado com sucesso.\n");
+
+    return 0;
+}

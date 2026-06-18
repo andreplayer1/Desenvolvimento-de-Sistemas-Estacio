@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart'; // Importa a nossa página principal que está na pasta
+import 'pages/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); // Ponto de entrada do aplicativo
 }
 
 class MyApp extends StatelessWidget {
@@ -12,31 +12,31 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Quest Log',
+      title: 'Easy List', // Nome do app
       theme: ThemeData(
-        brightness: Brightness.dark,
-        scaffoldBackgroundColor: const Color(0xFF121212),
-        colorScheme: const ColorScheme.dark(
-          primary: Color(0xFF00E5FF),
-          secondary: Color(0xFF00E5FF),
-          surface: Color(0xFF1E1E1E),
+        scaffoldBackgroundColor: const Color(0xFFF4E8D1),
+
+        colorScheme: const ColorScheme.light(
+          primary: Color(0xFF8B5A2B),
+          surface: Color(0xFFFFF8DC),
+          onSurface: Color(0xFF3E2723),
         ),
+
         appBarTheme: const AppBarTheme(
-          backgroundColor: Color(0xFF1E1E1E),
-          elevation: 0,
+          backgroundColor: Color(0xFF8B5A2B),
+          foregroundColor: Color(0xFFFFF8DC),
           centerTitle: true,
-          titleTextStyle: TextStyle(
-            color: Color(0xFFe0e0e0),
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
         ),
+
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: Color(0xFF00E5FF),
-          foregroundColor: Colors.black,
+          backgroundColor: Color(0xFF8B5A2B),
+          foregroundColor: Color(0xFFFFF8DC),
         ),
+
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        // Responsividade: adapta densidade visual para diferentes dispositivos
       ),
-      home: const HomePage(),
+      home: const HomePage(), // Tela inicial
     );
   }
 }

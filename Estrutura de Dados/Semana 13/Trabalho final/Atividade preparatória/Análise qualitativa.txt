@@ -1,0 +1,6 @@
+Rodando os testes no vetor, deu para notar bem a diferença de como cada algoritmo força a máquina:
+Bubble Sort: De longe, é o método que mais trabalha à toa. Ele faz muitas trocas de posições sem necessidade (fica jogando as "bolhas" para cima o tempo todo comparando os vizinhos). Por exigir tantas gravações na memória, ele é bem lento e serve mais para a gente aprender a lógica básica do que para ser usado num sistema de verdade.
+
+Selection Sort: Esse já age de forma bem mais estratégica. Em vez de trocar toda hora, ele varre o restante do vetor, acha quem é o menor número e coloca no lugar certo de uma vez só. Ele faz no máximo uma troca por ciclo, o que poupa muito a memória, mas ainda gasta tempo fazendo as comparações.
+
+Insertion Sort: Me pareceu o mais adaptável. Ele funciona puxando os números maiores para a direita para "abrir um buraco" e encaixar o valor atual na posição certa. A grande vantagem dele é que, se o vetor já estiver quase todo ordenado, ele voa e resolve o problema muito rápido. Ele só fica pesado mesmo no pior cenário.
